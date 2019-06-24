@@ -1,6 +1,7 @@
 package com.company.HackerEarth.JuneCircuit19;
 
 import java.io.InvalidObjectException;
+import java.util.Comparator;
 
 public class Path implements Comparable {
 
@@ -21,9 +22,6 @@ public class Path implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        if (o instanceof Path){
-            return value - ((Path)o).value;
-        }
-        return 0;
+        return value - ((Path)o).value;
     }
 }

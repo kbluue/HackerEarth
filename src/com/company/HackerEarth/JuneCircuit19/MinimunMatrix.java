@@ -104,6 +104,9 @@ public class MinimunMatrix extends Code {
     private Direction getDirection(){
 
         ArrayList<Path> possiblePaths = getPossiblePaths(pos);
+        if (possiblePaths.size() == 0){
+            return STUCK;
+        }
 
         //check for closed paths with single outlet
         for (Path path: possiblePaths){
@@ -112,7 +115,13 @@ public class MinimunMatrix extends Code {
             }
         }
 
-        Path path = possiblePaths.parallelStream().min(Path::compareTo).get();
+        //check for path with lowest value
+        Path path = possiblePaths.get(0);
+        for (int i = 1; i < possiblePaths.size(); i++) {
+            if (possiblePaths.get(i).compareTo(path) < 0) {
+                path = possiblePaths.get(i);
+            }
+        }
         return path.dir;
     }
 

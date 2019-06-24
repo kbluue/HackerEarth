@@ -82,8 +82,9 @@ public class MinimunMatrix extends Code {
             int[] temp = getPosition(position, dir);
             if (!hasBeenVisited(temp)){
                 int value = getValue(temp);
+                int outlets = getPossiblePaths(temp).size();
                 boolean open = !hasBeenVisited(getPosition(temp, dir));
-                possiblePaths.add(new Path(value, open, dir));
+                possiblePaths.add(new Path(value, outlets, open, dir));
             }
         }
         return possiblePaths;
@@ -91,34 +92,15 @@ public class MinimunMatrix extends Code {
 
     private Direction getDirection(){
 
-        Direction direction = STUCK;
-        int minValue = -1;
-        HashMap<Direction, Integer> possibleDirections = new HashMap<>();
+        ArrayList<Path> possiblePaths = getPossiblePaths(pos);
 
-        for (Direction dir : Direction.values()){
-            if (dir != STUCK){
-                int[] temp = getPosition(dir);
-                if (!hasBeenVisited(temp)){
-                    possibleDirections.put(dir, getValue(temp));
-
-                    int cellValue = getValue(temp);
-                    if (minValue == -1 || cellValue < minValue){
-                        minValue = cellValue;
-                        direction = dir;
-                    }
-                }
+        //check for closed paths with single outlet
+        for (Path path: possiblePaths){
+            if (path.fitsCase1()){
+                return path.dir;
             }
         }
-
-        //handling edges
-        if (possibleDirections.size() == 2){
-
-        } else {
-//            possibleDirections.values().stream().min();
-//            return possibleDirections.ke
-        }
-
-        return direction;
+        return null;
     }
 
     private void move(){

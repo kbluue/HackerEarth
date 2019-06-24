@@ -2,6 +2,7 @@ package com.company.HackerEarth.JuneCircuit19;
 
 import com.company.Code;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
@@ -73,6 +74,19 @@ public class MinimunMatrix extends Code {
             y--;
         }
         return new int[]{x, y};
+    }
+
+    private ArrayList<Path> getPossiblePaths(int[] position){
+        ArrayList<Path> possiblePaths = new ArrayList<>();
+        for (Direction dir: Direction.values()){
+            int[] temp = getPosition(position, dir);
+            if (!hasBeenVisited(temp)){
+                int value = getValue(temp);
+                boolean open = !hasBeenVisited(getPosition(temp, dir));
+                possiblePaths.add(new Path(value, open, dir));
+            }
+        }
+        return possiblePaths;
     }
 
     private Direction getDirection(){

@@ -100,8 +100,8 @@ public class MinimunMatrix extends Code {
         if (possibleDirections.size() == 2){
 
         } else {
-            possibleDirections.values().stream().min();
-            return possibleDirections.ke
+//            possibleDirections.values().stream().min();
+//            return possibleDirections.ke
         }
 
         return direction;

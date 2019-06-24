@@ -22,6 +22,8 @@ public class MinimunMatrix extends Code {
         while (visitCount < maxVisitCount){
             move();
         }
+
+        checkForCompleteTouch();
         return null;
     }
 
@@ -94,11 +96,9 @@ public class MinimunMatrix extends Code {
 
     private int getPossiblePathCount(int[] position){
         int count = 0;
-        System.out.println(Arrays.toString(position));
         for (Direction dir: Direction.values()){
             if (dir != STUCK){
                 int[] temp = getPosition(position, dir);
-                System.out.println(dir + "//" + hasBeenVisited(temp));
                 if (!hasBeenVisited(temp)){
                     count++;
                 }
@@ -137,9 +137,6 @@ public class MinimunMatrix extends Code {
         visitCount++;
         setVisited(pos);
         System.out.println(Arrays.toString(pos) + " ==> " + getValue(pos));
-        System.out.println(Arrays.toString(visited[0]));
-        System.out.println(Arrays.toString(visited[1]));
-        System.out.println(Arrays.toString(visited[2]));
     }
 
     private int getValue(int[] pos){
@@ -156,5 +153,17 @@ public class MinimunMatrix extends Code {
 
     private void setVisited(int[] pos){
         visited[pos[0]][pos[1]] = true;
+    }
+
+    private void checkForCompleteTouch(){
+        for (boolean[] line: visited){
+            for (boolean touched: line){
+                if (!touched) {
+                    System.out.println("Error");
+                    return;
+                }
+            }
+        }
+        System.out.println("Clean Matrix");
     }
 }

@@ -18,7 +18,6 @@ public class Path implements Comparable {
     }
 
     public boolean fitsCase1(){
-        System.out.println(dir + " ==> " + open + "//" + outlets);
         return (!open && outlets == 1);
     }
 

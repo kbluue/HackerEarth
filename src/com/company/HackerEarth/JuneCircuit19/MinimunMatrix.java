@@ -82,12 +82,23 @@ public class MinimunMatrix extends Code {
             int[] temp = getPosition(position, dir);
             if (!hasBeenVisited(temp)){
                 int value = getValue(temp);
-                int outlets = getPossiblePaths(temp).size();
+                int outlets = getPossiblePathCount(position);
                 boolean open = !hasBeenVisited(getPosition(temp, dir));
                 possiblePaths.add(new Path(value, outlets, open, dir));
             }
         }
         return possiblePaths;
+    }
+
+    private int getPossiblePathCount(int[] position){
+        int count = 0;
+        for (Direction dir: Direction.values()){
+            int[] temp = getPosition(position, dir);
+            if (!hasBeenVisited(temp)){
+                count++;
+            }
+        }
+        return count;
     }
 
     private Direction getDirection(){

@@ -100,7 +100,9 @@ public class MinimunMatrix extends Code {
                 return path.dir;
             }
         }
-        return null;
+
+        Path path = possiblePaths.parallelStream().min(Path::compareTo).get();
+        return path.dir;
     }
 
     private void move(){

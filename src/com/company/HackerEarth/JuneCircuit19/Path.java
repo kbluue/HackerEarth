@@ -1,6 +1,8 @@
 package com.company.HackerEarth.JuneCircuit19;
 
-public class Path {
+import java.io.InvalidObjectException;
+
+public class Path implements Comparable {
 
     int value, outlets;
     boolean open;
@@ -15,5 +17,13 @@ public class Path {
 
     public boolean fitsCase1(){
         return (!open && outlets == 1);
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        if (o instanceof Path){
+            return value - ((Path)o).value;
+        }
+        return 0;
     }
 }

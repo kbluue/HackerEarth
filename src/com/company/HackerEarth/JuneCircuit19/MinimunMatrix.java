@@ -4,8 +4,6 @@ import com.company.Code;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.HashMap;
 
 import static com.company.HackerEarth.JuneCircuit19.Direction.*;
 
@@ -16,14 +14,19 @@ public class MinimunMatrix extends Code {
     private int visitCount;
     private int[] pos;
     private int[][] values;
+    private Direction[][] movement;
 
     @Override
     protected String codeBody() {
         while (visitCount < maxVisitCount){
-            move();
+            if (move() == STUCK){
+                break;
+            }
         }
+        setMovement(pos, STUCK);
 
         checkForCompleteTouch();
+        printMovement();
         return null;
     }
 
@@ -58,6 +61,9 @@ public class MinimunMatrix extends Code {
 
         //init maxVisitCount
         maxVisitCount = m * n;
+
+        //init movement
+        movement = new Direction[m][n];
     }
 
     private int[] getPosition(Direction direction){
@@ -83,10 +89,10 @@ public class MinimunMatrix extends Code {
         for (Direction dir: Direction.values()){
             if (dir != STUCK){
                 int[] temp = getPosition(position, dir);
-                if (!hasBeenVisited(temp)){
+                if (notVisited(temp)){
                     int value = getValue(temp);
                     int outlets = getPossiblePathCount(temp);
-                    boolean open = !hasBeenVisited(getPosition(temp, dir));
+                    boolean open = notVisited(getPosition(temp, dir));
                     possiblePaths.add(new Path(value, outlets, open, dir));
                 }
             }
@@ -99,7 +105,7 @@ public class MinimunMatrix extends Code {
         for (Direction dir: Direction.values()){
             if (dir != STUCK){
                 int[] temp = getPosition(position, dir);
-                if (!hasBeenVisited(temp)){
+                if (notVisited(temp)){
                     count++;
                 }
             }
@@ -131,23 +137,25 @@ public class MinimunMatrix extends Code {
         return path.dir;
     }
 
-    private void move(){
+    private Direction move(){
         Direction direction = getDirection();
+        setMovement(pos, direction);
         pos = getPosition(direction);
         visitCount++;
         setVisited(pos);
         System.out.println(Arrays.toString(pos) + " ==> " + getValue(pos));
+        return direction;
     }
 
     private int getValue(int[] pos){
         return values[pos[0]][pos[1]];
     }
 
-    private boolean hasBeenVisited(int[] pos){
+    private boolean notVisited(int[] pos){
         try {
-            return visited[pos[0]][pos[1]];
+            return !visited[pos[0]][pos[1]];
         } catch (IndexOutOfBoundsException e){
-            return true;
+            return false;
         }
     }
 
@@ -165,5 +173,15 @@ public class MinimunMatrix extends Code {
             }
         }
         System.out.println("Clean Matrix");
+    }
+
+    private void setMovement(int[] pos, Direction dir){
+        movement[pos[0]][pos[1]] = dir;
+    }
+
+    private void printMovement(){
+        for (Direction[] line : movement){
+            System.out.println(Arrays.toString(line));
+        }
     }
 }

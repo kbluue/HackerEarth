@@ -79,12 +79,14 @@ public class MinimunMatrix extends Code {
     private ArrayList<Path> getPossiblePaths(int[] position){
         ArrayList<Path> possiblePaths = new ArrayList<>();
         for (Direction dir: Direction.values()){
-            int[] temp = getPosition(position, dir);
-            if (!hasBeenVisited(temp)){
-                int value = getValue(temp);
-                int outlets = getPossiblePathCount(position);
-                boolean open = !hasBeenVisited(getPosition(temp, dir));
-                possiblePaths.add(new Path(value, outlets, open, dir));
+            if (dir != STUCK){
+                int[] temp = getPosition(position, dir);
+                if (!hasBeenVisited(temp)){
+                    int value = getValue(temp);
+                    int outlets = getPossiblePathCount(temp);
+                    boolean open = !hasBeenVisited(getPosition(temp, dir));
+                    possiblePaths.add(new Path(value, outlets, open, dir));
+                }
             }
         }
         return possiblePaths;
@@ -92,10 +94,14 @@ public class MinimunMatrix extends Code {
 
     private int getPossiblePathCount(int[] position){
         int count = 0;
+        System.out.println(Arrays.toString(position));
         for (Direction dir: Direction.values()){
-            int[] temp = getPosition(position, dir);
-            if (!hasBeenVisited(temp)){
-                count++;
+            if (dir != STUCK){
+                int[] temp = getPosition(position, dir);
+                System.out.println(dir + "//" + hasBeenVisited(temp));
+                if (!hasBeenVisited(temp)){
+                    count++;
+                }
             }
         }
         return count;
@@ -131,6 +137,9 @@ public class MinimunMatrix extends Code {
         visitCount++;
         setVisited(pos);
         System.out.println(Arrays.toString(pos) + " ==> " + getValue(pos));
+        System.out.println(Arrays.toString(visited[0]));
+        System.out.println(Arrays.toString(visited[1]));
+        System.out.println(Arrays.toString(visited[2]));
     }
 
     private int getValue(int[] pos){

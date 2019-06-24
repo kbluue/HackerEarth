@@ -1,6 +1,7 @@
 package com.company.HackerEarth.JuneCircuit19;
 
 import java.io.InvalidObjectException;
+import java.util.Arrays;
 import java.util.Comparator;
 
 public class Path implements Comparable {
@@ -17,6 +18,7 @@ public class Path implements Comparable {
     }
 
     public boolean fitsCase1(){
+        System.out.println(dir + " ==> " + open + "//" + outlets);
         return (!open && outlets == 1);
     }
 

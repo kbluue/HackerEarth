@@ -21,8 +21,8 @@ public class Path implements Comparable {
         return (!open && outlets == 2);
     }
 
-    public boolean isOpen() {
-        return open;
+    public boolean isClosed() {
+        return !open;
     }
 
     @Override

@@ -121,11 +121,19 @@ public class MinimumMatrix extends Code {
 
         //prioritize closed paths
         Set<Path> closedPaths = possiblePaths.stream()
-                .filter(path -> !path.isOpen())
+                .filter(Path::isClosed)
                 .collect(Collectors.toSet());
 
+        closedPaths = clearCase2s(closedPaths);
         if (closedPaths.size() > 0){
             possiblePaths = closedPaths;
+        } else {
+//            Set<Path> temp = possiblePaths.stream()
+//                    .filter(path -> notVisited(getPosition(getPosition(path.dir), path.dir)))
+//                    .collect(Collectors.toSet());
+//            if (temp.size() > 0) {
+//                possiblePaths = temp;
+//            }
         }
 
         //remove all case 2s

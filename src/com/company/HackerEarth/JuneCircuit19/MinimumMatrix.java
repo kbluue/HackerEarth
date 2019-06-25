@@ -27,7 +27,6 @@ public class MinimumMatrix extends Code {
         setMovement(pos, STUCK);
 
         checkForCompleteTouch();
-        printValues();
         printMovement();
         return null;
     }
@@ -104,19 +103,17 @@ public class MinimumMatrix extends Code {
     }
 
     private boolean fitsCase2(int[] position, Direction direction) {
-        System.out.println(Arrays.toString(position) + " init");
         if (direction == LEFT || direction == RIGHT){
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < 15; i++) {
                 int[] temp = new int[]{position[0], i};
-                if (!Arrays.equals(temp, position)){
-                    System.out.println(Arrays.toString(temp) + " " + notVisited(temp));
+//                if (!Arrays.equals(temp, position)){
                     if (notVisited(temp)){
                         return false;
                     }
-                }
+//                }
             }
         } else if (direction == UP || direction == DOWN){
-            for (int i = 0; i < m; i++) {
+            for (int i = 0; i < 15; i++) {
                 int[] temp = new int[]{i, position[1]};
                 if (Arrays.equals(temp, position)){
                     continue;
@@ -213,7 +210,6 @@ public class MinimumMatrix extends Code {
         pos = getPosition(direction);
         visitCount++;
         setVisited(pos);
-        System.out.println(Arrays.toString(pos) + " ==> " + getValue(pos));
         return direction;
     }
 

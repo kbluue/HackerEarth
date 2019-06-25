@@ -10,7 +10,6 @@ import static com.company.HackerEarth.JuneCircuit19.Direction.*;
 public class MinimumMatrix extends Code {
 
     private boolean[][] visited;
-    private int m, n;
     private int maxVisitCount;
     private int visitCount;
     private int[] pos;
@@ -36,8 +35,8 @@ public class MinimumMatrix extends Code {
         //set Size
         String line = input.nextLine();
         String[] numbers = line.split(" ");
-        m = Integer.parseInt(numbers[0]);
-        n = Integer.parseInt(numbers[1]);
+        int m = Integer.parseInt(numbers[0]);
+        int n = Integer.parseInt(numbers[1]);
 
         //set Values
         values = new int[m][n];
@@ -94,37 +93,11 @@ public class MinimumMatrix extends Code {
                     int value = getValue(temp);
                     int outlets = getPossiblePathCount(temp);
                     boolean open = notVisited(getPosition(temp, dir));
-                    boolean fitsCase2 = fitsCase2(temp, dir);
-                    possiblePaths.add(new Path(value, outlets, open, fitsCase2, dir));
+                    possiblePaths.add(new Path(value, outlets, open, dir));
                 }
             }
         }
         return possiblePaths;
-    }
-
-    private boolean fitsCase2(int[] position, Direction direction) {
-        if (direction == LEFT || direction == RIGHT){
-            for (int i = 0; i < 15; i++) {
-                int[] temp = new int[]{position[0], i};
-//                if (!Arrays.equals(temp, position)){
-                    if (notVisited(temp)){
-                        return false;
-                    }
-//                }
-            }
-        } else if (direction == UP || direction == DOWN){
-            for (int i = 0; i < 15; i++) {
-                int[] temp = new int[]{i, position[1]};
-                if (Arrays.equals(temp, position)){
-                    continue;
-                }
-
-                if (notVisited(temp)){
-                    return false;
-                }
-            }
-        }
-        return true;
     }
 
     private int getPossiblePathCount(int[] position){
@@ -169,26 +142,6 @@ public class MinimumMatrix extends Code {
                 if (possiblePaths.size() <= 1) break;
                 Path path = possiblePaths.get(i);
                 if (!path.open){
-                    possiblePaths.remove(path);
-                }
-            }
-        }
-
-        //check for case2 free paths
-        boolean case2FreePathAvailable = false;
-        for (Path path: possiblePaths){
-            if (!path.fitsCase2){
-                case2FreePathAvailable = true;
-                break;
-            }
-        }
-
-        //remove all case2 paths if alternative path is available
-        if (case2FreePathAvailable){
-            for (int i = 0; i < possiblePaths.size(); i++) {
-                if (possiblePaths.size() <= 1) break;
-                Path path = possiblePaths.get(i);
-                if (path.fitsCase2){
                     possiblePaths.remove(path);
                 }
             }
@@ -247,12 +200,6 @@ public class MinimumMatrix extends Code {
 
     private void printMovement(){
         for (Direction[] line : movement){
-            System.out.println(Arrays.toString(line));
-        }
-    }
-
-    private void printValues(){
-        for (int[] line : values){
             System.out.println(Arrays.toString(line));
         }
     }

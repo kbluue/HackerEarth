@@ -17,6 +17,10 @@ public class Path implements Comparable {
         return (!open && outlets == 1);
     }
 
+    boolean fitsCase2() {
+        return (!open && outlets == 2);
+    }
+
     @Override
     public int compareTo(Object o) {
         return value - ((Path)o).value;

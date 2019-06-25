@@ -116,35 +116,28 @@ public class MinimumMatrix extends Code {
     private Direction getDirection(){
 
         ArrayList<Path> possiblePaths = getPossiblePaths(pos);
+
+        //remove all case 2s
+        for (int i = 0; i < possiblePaths.size(); i++) {
+            Path path = possiblePaths.get(i);
+            if (path.fitsCase2()) {
+                possiblePaths.remove(path);
+                i--;
+            }
+        }
+
+        //prioritize case 1s
+        ArrayList<Path> case1Paths = new ArrayList<>();
+        for (Path path : possiblePaths) {
+            if (path.fitsCase1()) {
+                case1Paths.add(path);
+            }
+        }
+        if (case1Paths.size() > 0) possiblePaths = case1Paths;
+
+
         if (possiblePaths.size() == 0){
             return STUCK;
-        }
-
-        //check for closed paths with single outlet
-        for (Path path: possiblePaths){
-            if (path.fitsCase1()){
-                return path.dir;
-            }
-        }
-
-        //check if open path is available
-        boolean openPathAvailable = false;
-        for (Path path: possiblePaths){
-            if (path.open){
-                openPathAvailable = true;
-                break;
-            }
-        }
-
-        //remove all closed path if open alternative is available
-        if (openPathAvailable){
-            for (int i = 0; i < possiblePaths.size(); i++) {
-                if (possiblePaths.size() <= 1) break;
-                Path path = possiblePaths.get(i);
-                if (!path.open){
-                    possiblePaths.remove(path);
-                }
-            }
         }
 
         //check for path with lowest value

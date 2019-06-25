@@ -7,7 +7,7 @@ public class STDIN_STDOUT implements Runnable{
     private Code method;
     private Scanner scanner;
 
-    STDIN_STDOUT(Code method){
+    public STDIN_STDOUT(Code method){
         this.method = method;
     }
 

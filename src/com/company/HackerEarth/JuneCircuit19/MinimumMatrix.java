@@ -7,7 +7,7 @@ import java.util.Arrays;
 
 import static com.company.HackerEarth.JuneCircuit19.Direction.*;
 
-public class MinimunMatrix extends Code {
+public class MinimumMatrix extends Code {
 
     private boolean[][] visited;
     private int m, n;
@@ -104,7 +104,7 @@ public class MinimunMatrix extends Code {
 
     private boolean fitsCase2(int[] position, Direction direction) {
         if (direction == LEFT || direction == RIGHT){
-            for (int i = 0; i < n; i++) {
+            for (int i = 0; i < m; i++) {
                 int[] temp = new int[]{position[0], i};
                 if (temp == position){
                     continue;

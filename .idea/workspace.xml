@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c338ca-a3d4-446e-a3a3-12e1eeec11a1" name="Default Changelist" comment="Testing failed: IndexOutOfBound Caught and fixed with STUCK plug">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -41,8 +43,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+            <state relative-caret-position="153">
+              <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,8 +71,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="138" column="34" lean-forward="true" selection-start-line="138" selection-start-column="34" selection-end-line="145" selection-end-column="68" />
+            <state relative-caret-position="311">
+              <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#4730#4731#0" expanded="true" />
@@ -96,8 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="33">
-              <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+            <state relative-caret-position="101">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
               <folding>
                 <element signature="e#445#446#0" expanded="true" />
                 <element signature="e#491#492#0" expanded="true" />
@@ -157,6 +162,7 @@
       <find>, 0</find>
       <find>fal</find>
       <find>prin</find>
+      <find>Arra</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,10 +185,10 @@
         <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimunMatrix.java" />
-        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java" />
         <option value="$PROJECT_DIR$/src/com/company/STDIN_STDOUT.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Test/MinimumMatrixTest.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java" />
       </list>
     </option>
@@ -408,8 +414,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.MinimumMatrixTest" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="Java Scratch.Scratch (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Java Scratch.Scratch" />
         <item itemvalue="Application.MinimumMatrix" />
       </list>
@@ -445,7 +451,7 @@
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.32961783" />
+      <window_info anchor="bottom" id="Terminal" order="6" weight="0.32961783" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32961783" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32961783" />
@@ -457,7 +463,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Run" order="8" visible="true" weight="0.2677761" />
+      <window_info active="true" anchor="right" id="Run" order="8" visible="true" weight="0.2677761" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -542,13 +548,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="30" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -570,20 +569,6 @@
           <folding>
             <element signature="e#178#179#0" expanded="true" />
             <element signature="e#207#208#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
-          <folding>
-            <element signature="e#445#446#0" expanded="true" />
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#522#523#0" expanded="true" />
-            <element signature="e#549#550#0" expanded="true" />
-            <element signature="e#648#649#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -612,10 +597,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="101">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#522#523#0" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#648#649#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="20" lean-forward="true" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="138" column="34" lean-forward="true" selection-start-line="138" selection-start-column="34" selection-end-line="145" selection-end-column="68" />
+        <state relative-caret-position="311">
+          <caret line="134" column="45" selection-start-line="134" selection-start-column="45" selection-end-line="134" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4730#4731#0" expanded="true" />

@@ -2,8 +2,10 @@ package com.company.HackerEarth.JuneCircuit19;
 
 import com.company.Code;
 
-import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import static com.company.HackerEarth.JuneCircuit19.Direction.*;
 
@@ -84,8 +86,8 @@ public class MinimumMatrix extends Code {
         return new int[]{x, y};
     }
 
-    private ArrayList<Path> getPossiblePaths(int[] position){
-        ArrayList<Path> possiblePaths = new ArrayList<>();
+    private Set<Path> getPossiblePaths(int[] position){
+        Set<Path> possiblePaths = new HashSet<>();
         for (Direction dir: Direction.values()){
             if (dir != STUCK){
                 int[] temp = getPosition(position, dir);
@@ -115,39 +117,36 @@ public class MinimumMatrix extends Code {
 
     private Direction getDirection(){
 
-        ArrayList<Path> possiblePaths = getPossiblePaths(pos);
+        Set<Path> possiblePaths = getPossiblePaths(pos);
 
         //prioritize closed paths
-        ArrayList<Path> closedPaths = new ArrayList<>();
-        for (Path path : possiblePaths){
-            if (!path.isOpen()){
-                closedPaths.add(path);
-            }
-        }
+        Set<Path> closedPaths = possiblePaths.stream()
+                .filter(path -> !path.isOpen())
+                .collect(Collectors.toSet());
+
         if (closedPaths.size() > 0){
             possiblePaths = closedPaths;
         }
 
         //remove all case 2s
-        for (int i = 0; i < possiblePaths.size(); i++) {
-            Path path = possiblePaths.get(i);
-            if (path.fitsCase2()){
-                possiblePaths.remove(path);
-            }
-        }
+        possiblePaths = possiblePaths.parallelStream()
+                .filter(path -> !path.fitsCase2())
+                .collect(Collectors.toSet());
 
         if (possiblePaths.size() == 0){
             return STUCK;
+        } else {
+            //use path with lowest value
+            return possiblePaths.stream()
+                    .min(Path::compareTo)
+                    .get().dir;
         }
+    }
 
-        //check for path with lowest value
-        Path path = possiblePaths.get(0);
-        for (int i = 1; i < possiblePaths.size(); i++) {
-            if (possiblePaths.get(i).compareTo(path) < 0) {
-                path = possiblePaths.get(i);
-            }
-        }
-        return path.dir;
+    private Set<Path> clearCase2s(Set<Path> paths){
+        return paths.parallelStream()
+                .filter(path -> !path.fitsCase2())
+                .collect(Collectors.toSet());
     }
 
     private Direction move(){

@@ -117,23 +117,36 @@ public class MinimumMatrix extends Code {
 
         ArrayList<Path> possiblePaths = getPossiblePaths(pos);
 
-        //remove all case 2s
-        for (int i = 0; i < possiblePaths.size(); i++) {
-            Path path = possiblePaths.get(i);
-            if (path.fitsCase2()) {
-                possiblePaths.remove(path);
-                i--;
-            }
-        }
-
-        //prioritize case 1s
-        ArrayList<Path> case1Paths = new ArrayList<>();
+        //prioritize open paths
+        ArrayList<Path> openPaths = new ArrayList<>();
         for (Path path : possiblePaths) {
             if (path.fitsCase1()) {
-                case1Paths.add(path);
+                openPaths.add(path);
             }
         }
-        if (case1Paths.size() > 0) possiblePaths = case1Paths;
+        if (openPaths.size() > 0) {
+            possiblePaths = openPaths;
+        } else {
+            //remove all case 2s
+            for (int i = 0; i < possiblePaths.size(); i++) {
+                Path path = possiblePaths.get(i);
+                if (path.fitsCase2()) {
+                    possiblePaths.remove(path);
+                    i--;
+                }
+            }
+
+            //prioritize case 1s
+            ArrayList<Path> case1Paths = new ArrayList<>();
+            for (Path path : possiblePaths) {
+                if (path.fitsCase1()) {
+                    case1Paths.add(path);
+                }
+            }
+            if (case1Paths.size() > 0) possiblePaths = case1Paths;
+        }
+
+
 
 
         if (possiblePaths.size() == 0){

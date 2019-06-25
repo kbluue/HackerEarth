@@ -3,7 +3,7 @@ package com.company.HackerEarth.JuneCircuit19;
 public class Path implements Comparable {
 
     private int value, outlets;
-    public boolean open;
+    private boolean open;
     Direction dir;
 
     Path(int value, int outlets, boolean open, Direction dir) {
@@ -19,6 +19,10 @@ public class Path implements Comparable {
 
     boolean fitsCase2() {
         return (!open && outlets == 2);
+    }
+
+    public boolean isOpen() {
+        return open;
     }
 
     @Override

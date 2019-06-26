@@ -143,14 +143,14 @@ public class MinimumMatrix extends Code {
         if (closedPaths.size() > 0) {
             possiblePaths = closedPaths;
         } else {
-            //prioritize degree3 paths
-//            Set<Path> d3Paths = possiblePaths.stream()
-//                    .filter(Path::isDegree3)
-//                    .collect(Collectors.toSet());
-//
-//            if (!d3Paths.isEmpty()){
-//                possiblePaths = d3Paths;
-//            }
+//            prioritize degree3 paths
+            Set<Path> d3Paths = possiblePaths.stream()
+                    .filter(Path::isDegree3)
+                    .collect(Collectors.toSet());
+
+            if (!d3Paths.isEmpty()){
+                possiblePaths = d3Paths;
+            }
         }
 
         if (possiblePaths.size() == 0) {

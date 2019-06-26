@@ -20,8 +20,8 @@ public class MinimumMatrix extends Code {
 
     @Override
     protected String codeBody() {
-        while (visitCount < maxVisitCount){
-            if (move() == STUCK){
+        while (visitCount < maxVisitCount) {
+            if (move() == STUCK) {
                 break;
             }
         }
@@ -68,46 +68,52 @@ public class MinimumMatrix extends Code {
         movement = new Direction[m][n];
     }
 
-    private int[] getPosition(Direction direction){
+    private int[] getPosition(Direction direction) {
         return getPosition(pos, direction);
     }
 
-    private int[] getPosition(int[] start, Direction direction){
+    private int[] getPosition(int[] start, Direction direction) {
         int x = start[0], y = start[1];
         if (direction == UP) {
             x--;
-        } else if (direction == RIGHT){
+        } else if (direction == RIGHT) {
             y++;
-        } else if (direction == DOWN){
+        } else if (direction == DOWN) {
             x++;
-        } else if (direction == LEFT){
+        } else if (direction == LEFT) {
             y--;
         }
         return new int[]{x, y};
     }
 
-    private Set<Path> getPossiblePaths(int[] position){
+    private Set<Path> getPossiblePaths(int[] position) {
         Set<Path> possiblePaths = new HashSet<>();
-        for (Direction dir: Direction.values()){
-            if (dir != STUCK){
+        for (Direction dir : Direction.values()) {
+            if (dir != STUCK) {
                 int[] temp = getPosition(position, dir);
-                if (notVisited(temp)){
+                if (notVisited(temp)) {
                     int value = getValue(temp);
                     int outlets = getPossiblePathCount(temp);
-                    boolean open = notVisited(getPosition(temp, dir));
-                    possiblePaths.add(new Path(value, outlets, open, dir));
+                    int[] temp2 = getPosition(temp, dir);
+                    boolean open = notVisited(temp2);
+                    boolean degree3 = false;
+                    if (open){
+                        int[] temp3 = getPosition(temp2, dir);
+                        degree3 = notVisited(temp3);
+                    }
+                    possiblePaths.add(new Path(value, outlets, open, degree3, dir));
                 }
             }
         }
         return possiblePaths;
     }
 
-    private int getPossiblePathCount(int[] position){
+    private int getPossiblePathCount(int[] position) {
         int count = 0;
-        for (Direction dir: Direction.values()){
-            if (dir != STUCK){
+        for (Direction dir : Direction.values()) {
+            if (dir != STUCK) {
                 int[] temp = getPosition(position, dir);
-                if (notVisited(temp)){
+                if (notVisited(temp)) {
                     count++;
                 }
             }
@@ -115,33 +121,32 @@ public class MinimumMatrix extends Code {
         return count;
     }
 
-    private Direction getDirection(){
+    private Direction getDirection() {
 
         Set<Path> possiblePaths = getPossiblePaths(pos);
+
+        //remove case 2s
+        possiblePaths = clearCase2s(possiblePaths);
 
         //prioritize closed paths
         Set<Path> closedPaths = possiblePaths.stream()
                 .filter(Path::isClosed)
                 .collect(Collectors.toSet());
 
-        closedPaths = clearCase2s(closedPaths);
-        if (closedPaths.size() > 0){
+        if (closedPaths.size() > 0) {
             possiblePaths = closedPaths;
         } else {
-//            Set<Path> temp = possiblePaths.stream()
-//                    .filter(path -> notVisited(getPosition(getPosition(path.dir), path.dir)))
+            //prioritize degree3 paths
+//            Set<Path> d3Paths = possiblePaths.stream()
+//                    .filter(Path::isDegree3)
 //                    .collect(Collectors.toSet());
-//            if (temp.size() > 0) {
-//                possiblePaths = temp;
+//
+//            if (!d3Paths.isEmpty()){
+//                possiblePaths = d3Paths;
 //            }
         }
 
-        //remove all case 2s
-        possiblePaths = possiblePaths.parallelStream()
-                .filter(path -> !path.fitsCase2())
-                .collect(Collectors.toSet());
-
-        if (possiblePaths.size() == 0){
+        if (possiblePaths.size() == 0) {
             return STUCK;
         } else {
             //use path with lowest value
@@ -151,13 +156,17 @@ public class MinimumMatrix extends Code {
         }
     }
 
-    private Set<Path> clearCase2s(Set<Path> paths){
+    private Set<Path> clearCase2s(Set<Path> paths) {
         return paths.parallelStream()
                 .filter(path -> !path.fitsCase2())
                 .collect(Collectors.toSet());
     }
 
-    private Direction move(){
+    private boolean is2PointClear(Direction direction) {
+        return true;
+    }
+
+    private Direction move() {
         Direction direction = getDirection();
         setMovement(pos, direction);
         pos = getPosition(direction);
@@ -166,25 +175,25 @@ public class MinimumMatrix extends Code {
         return direction;
     }
 
-    private int getValue(int[] pos){
+    private int getValue(int[] pos) {
         return values[pos[0]][pos[1]];
     }
 
-    private boolean notVisited(int[] pos){
+    private boolean notVisited(int[] pos) {
         try {
             return !visited[pos[0]][pos[1]];
-        } catch (IndexOutOfBoundsException e){
+        } catch (IndexOutOfBoundsException e) {
             return false;
         }
     }
 
-    private void setVisited(int[] pos){
+    private void setVisited(int[] pos) {
         visited[pos[0]][pos[1]] = true;
     }
 
-    private void checkForCompleteTouch(){
-        for (boolean[] line: visited){
-            for (boolean touched: line){
+    private void checkForCompleteTouch() {
+        for (boolean[] line : visited) {
+            for (boolean touched : line) {
                 if (!touched) {
                     System.out.println("Error");
                     return;
@@ -194,12 +203,12 @@ public class MinimumMatrix extends Code {
         System.out.println("Clean Matrix");
     }
 
-    private void setMovement(int[] pos, Direction dir){
+    private void setMovement(int[] pos, Direction dir) {
         movement[pos[0]][pos[1]] = dir;
     }
 
-    private void printMovement(){
-        for (Direction[] line : movement){
+    private void printMovement() {
+        for (Direction[] line : movement) {
             System.out.println(Arrays.toString(line));
         }
     }

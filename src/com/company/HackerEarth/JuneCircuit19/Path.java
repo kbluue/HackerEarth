@@ -3,13 +3,14 @@ package com.company.HackerEarth.JuneCircuit19;
 public class Path implements Comparable {
 
     private int value, outlets;
-    private boolean open;
+    private boolean open, degree3;
     Direction dir;
 
-    Path(int value, int outlets, boolean open, Direction dir) {
+    Path(int value, int outlets, boolean open, boolean degree3, Direction dir) {
         this.value = value;
         this.outlets = outlets;
         this.open = open;
+        this.degree3 = degree3;
         this.dir = dir;
     }
 
@@ -23,6 +24,10 @@ public class Path implements Comparable {
 
     public boolean isClosed() {
         return !open;
+    }
+
+    public boolean isDegree3() {
+        return degree3;
     }
 
     @Override

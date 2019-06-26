@@ -2,9 +2,7 @@ package com.company.HackerEarth.JuneCircuit19;
 
 import com.company.Code;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static com.company.HackerEarth.JuneCircuit19.Direction.*;
@@ -17,6 +15,19 @@ public class MinimumMatrix extends Code {
     private int[] pos;
     private int[][] values;
     private Direction[][] movement;
+    private List<MinimumMatrix> checkPoints;
+
+    public MinimumMatrix(){}
+
+    private MinimumMatrix(boolean[][] visited, int maxVisitCount, int visitCount, int[] pos, int[][] values, Direction[][] movement, List<MinimumMatrix> checkPoints) {
+        this.visited = visited;
+        this.maxVisitCount = maxVisitCount;
+        this.visitCount = visitCount;
+        this.pos = pos;
+        this.values = values;
+        this.movement = movement;
+        this.checkPoints = checkPoints;
+    }
 
     @Override
     protected String codeBody() {
@@ -29,6 +40,7 @@ public class MinimumMatrix extends Code {
 
         checkForCompleteTouch();
         printMovement();
+        getLastCheckpoint().printMovement();
         return null;
     }
 
@@ -66,6 +78,10 @@ public class MinimumMatrix extends Code {
 
         //init movement
         movement = new Direction[m][n];
+
+        //init checkpoints and add start point
+        checkPoints = new ArrayList<>();
+        saveCheckPoint();
     }
 
     private int[] getPosition(Direction direction) {
@@ -218,5 +234,23 @@ public class MinimumMatrix extends Code {
         for (Direction[] line : movement) {
             System.out.println(Arrays.toString(line));
         }
+        System.out.println("===============");
+    }
+
+    private void saveCheckPoint(){
+        checkPoints.add(clone());
+    }
+
+    private MinimumMatrix getLastCheckpoint(){
+        if (checkPoints.size() == 1){
+            System.out.println("clean version");
+            return checkPoints.get(0);
+        } else {
+            return checkPoints.remove(checkPoints.size() - 1);
+        }
+    }
+
+    protected MinimumMatrix clone()  {
+        return new MinimumMatrix(visited, maxVisitCount, visitCount, pos, values, movement, checkPoints);
     }
 }

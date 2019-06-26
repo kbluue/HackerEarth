@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c338ca-a3d4-446e-a3a3-12e1eeec11a1" name="Default Changelist" comment="Testing failed: IndexOutOfBound Caught and fixed with STUCK plug">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java" afterDir="false" />
     </list>
@@ -18,15 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="5" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -69,12 +59,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="144" column="40" selection-start-line="144" selection-start-column="40" selection-end-line="144" selection-end-column="40" />
+            <state relative-caret-position="221">
+              <caret line="101" column="62" lean-forward="true" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4694#4695#0" expanded="true" />
+                <element signature="e#5112#5113#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -94,9 +93,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="23" />
+            <state relative-caret-position="169">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
               <folding>
+                <element signature="e#357#358#0" expanded="true" />
+                <element signature="e#408#409#0" expanded="true" />
+                <element signature="e#435#436#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#525#526#0" expanded="true" />
+                <element signature="e#553#554#0" expanded="true" />
                 <element signature="e#645#646#0" expanded="true" />
                 <element signature="e#675#676#0" expanded="true" />
                 <element signature="e#605#606#0" expanded="true" />
@@ -180,6 +185,7 @@
         <option value="$PROJECT_DIR$/src/com/company/STDIN_STDOUT.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Test/MinimumMatrixTest.java" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.txt" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java" />
       </list>
@@ -198,137 +204,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="220619" type="b2602c69:ProjectViewProjectNode" />
-              <item name="220619" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="220619" type="b2602c69:ProjectViewProjectNode" />
-              <item name="220619" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="220619" type="b2602c69:ProjectViewProjectNode" />
-              <item name="220619" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="220619" type="b2602c69:ProjectViewProjectNode" />
-              <item name="220619" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="company" type="462c0819:PsiDirectoryNode" />
-              <item name="JuneCircuit19" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="220619" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="220619" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Scratches" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Production'; set:Production; class com.intellij.psi.search.scope.ProjectProductionScope">
-          <expand>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="HackerEarth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="HackerEarth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="JuneCircuit19" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="HackerEarth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="220619" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="220619" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="company" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="HackerEarth" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="JuneCircuit19" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -588,6 +464,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="30" column="30" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Test/MinimumMatrixTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
@@ -600,9 +483,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Path.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="23" />
+        <state relative-caret-position="169">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
           <folding>
+            <element signature="e#357#358#0" expanded="true" />
+            <element signature="e#408#409#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#525#526#0" expanded="true" />
+            <element signature="e#553#554#0" expanded="true" />
             <element signature="e#645#646#0" expanded="true" />
             <element signature="e#675#676#0" expanded="true" />
             <element signature="e#605#606#0" expanded="true" />
@@ -613,11 +502,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="144" column="40" selection-start-line="144" selection-start-column="40" selection-end-line="144" selection-end-column="40" />
+        <state relative-caret-position="221">
+          <caret line="101" column="62" lean-forward="true" selection-start-line="101" selection-start-column="62" selection-end-line="101" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4694#4695#0" expanded="true" />
+            <element signature="e#5112#5113#0" expanded="true" />
           </folding>
         </state>
       </provider>

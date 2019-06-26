@@ -92,20 +92,27 @@ public class MinimumMatrix extends Code {
             if (dir != STUCK) {
                 int[] temp = getPosition(position, dir);
                 if (notVisited(temp)) {
-                    int value = getValue(temp);
+                    int degree = getDegree(temp, dir);
                     int outlets = getPossiblePathCount(temp);
-                    int[] temp2 = getPosition(temp, dir);
-                    boolean open = notVisited(temp2);
-                    boolean degree3 = false;
-                    if (open){
-                        int[] temp3 = getPosition(temp2, dir);
-                        degree3 = notVisited(temp3);
-                    }
-                    possiblePaths.add(new Path(value, outlets, open, degree3, dir));
+                    int value = getValue(temp);
+                    possiblePaths.add(new Path(value, outlets, degree, dir));
                 }
             }
         }
         return possiblePaths;
+    }
+
+    private int getDegree(int[] position, Direction direction){
+        int degree = 0;
+        int[] temp = getPosition(position, direction);
+        if (notVisited(temp)){
+            degree++;
+            temp = getPosition(position, direction);
+            if (notVisited(temp)){
+                degree++;
+            }
+        }
+        return degree;
     }
 
     private int getPossiblePathCount(int[] position) {

@@ -1,18 +1,12 @@
 package com.company;
 
-public abstract class Test implements Problem{
+public interface Test extends Problem {
 
-    Problem problem;
-
-    public Test(Problem problem) {
-        this.problem = problem;
-    }
-
-    abstract void generateInput();
+    void generateInput();
 
     @Override
-    public void run(){
+    default void run(){
         generateInput();
-        System.out.println(problem.solution());
+        System.out.println(solution());
     }
 }

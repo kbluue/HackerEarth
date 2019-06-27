@@ -1,18 +1,12 @@
 package com.company;
 
-public abstract class Test implements Runnable{
+public interface Test extends Problem {
 
-    Code code;
-
-    public Test(Code code) {
-        this.code = code;
-    }
-
-    public abstract void generateInput();
+    void generateInput();
 
     @Override
-    public void process() {
-        code.process();
-        System.out.println(code.getOutput());
+    default void run(){
+        generateInput();
+        System.out.println(solution());
     }
 }

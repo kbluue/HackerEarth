@@ -19,11 +19,11 @@ public class MinimumMatrix extends Code {
 
     public MinimumMatrix(){}
 
-    private MinimumMatrix(boolean[][] visited, int maxVisitCount, int visitCount, int[] pos, int[][] values, Direction[][] movement, List<MinimumMatrix> checkPoints) {
-        this.visited = visited;
-        this.maxVisitCount = maxVisitCount;
-        this.visitCount = visitCount;
-        this.pos = pos;
+    private MinimumMatrix(MinimumMatrix original) {
+        visited = visited;
+        maxVisitCount = maxVisitCount;
+        visitCount = visitCount;
+        pos = pos;
         this.values = values;
         this.movement = movement;
         this.checkPoints = checkPoints;
@@ -40,7 +40,8 @@ public class MinimumMatrix extends Code {
 
         checkForCompleteTouch();
         printMovement();
-        getLastCheckpoint().printMovement();
+//        getLastCheckpoint().printMovement();
+        this.cl = getLastCheckpoint();
         return null;
     }
 
@@ -230,7 +231,7 @@ public class MinimumMatrix extends Code {
         movement[pos[0]][pos[1]] = dir;
     }
 
-    private void printMovement() {
+    public void printMovement() {
         for (Direction[] line : movement) {
             System.out.println(Arrays.toString(line));
         }
@@ -238,6 +239,8 @@ public class MinimumMatrix extends Code {
     }
 
     private void saveCheckPoint(){
+        System.out.println("Pre-clone");
+        clone().printMovement();
         checkPoints.add(clone());
     }
 

@@ -1,6 +1,5 @@
-package com.company.HackerEarth.JuneCircuit19.Test;
+package com.company.HackerEarth.JuneCircuit19.Tests;
 
-import com.company.Code;
 import com.company.HackerEarth.JuneCircuit19.MinimumMatrix;
 import com.company.STDIN_STDOUT;
 

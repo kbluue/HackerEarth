@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import static com.company.HackerEarth.JuneCircuit19.Direction.*;
 
-public class MinimumMatrix extends Code {
+public class MinimumMatrix extends Code implements Cloneable{
 
     private boolean[][] visited;
     private int maxVisitCount;
@@ -16,8 +16,6 @@ public class MinimumMatrix extends Code {
     private int[][] values;
     private Direction[][] movement;
     private List<MinimumMatrix> checkPoints;
-
-    public MinimumMatrix(){}
 
     @Override
     protected String codeBody() {
@@ -29,6 +27,7 @@ public class MinimumMatrix extends Code {
         setMovement(pos, STUCK);
 
         checkForCompleteTouch();
+        printMovement();
         return null;
     }
 
@@ -235,5 +234,10 @@ public class MinimumMatrix extends Code {
         } else {
             return checkPoints.remove(checkPoints.size() - 1);
         }
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

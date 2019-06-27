@@ -1,10 +1,8 @@
 package com.company;
 
-import com.company.Problem;
-
 public class ProblemExample implements Problem {
 
-    private int a, b;
+    protected int a, b;
 
     @Override
     public String solution() {

@@ -4,7 +4,7 @@ public class TestExample extends ProblemExample implements Test {
 
     @Override
     public void generateInput() {
-        a = 2;
-        b = 3;
+        a = Test.generateInt(8, 10);
+        b = Test.generateInt(10);
     }
 }

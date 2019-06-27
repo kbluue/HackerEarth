@@ -1,4 +1,4 @@
-package com.company.HackerEarth;
+package com.company;
 
 import com.company.Problem;
 

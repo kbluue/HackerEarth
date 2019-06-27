@@ -20,13 +20,13 @@ public class MinimumMatrix extends Code {
     public MinimumMatrix(){}
 
     private MinimumMatrix(MinimumMatrix original) {
-        visited = visited;
+        visited = original.visited;
         maxVisitCount = maxVisitCount;
         visitCount = visitCount;
         pos = pos;
-        this.values = values;
-        this.movement = movement;
-        this.checkPoints = checkPoints;
+        values = values;
+        movement = original.movement.clone();
+        checkPoints = checkPoints;
     }
 
     @Override
@@ -40,8 +40,7 @@ public class MinimumMatrix extends Code {
 
         checkForCompleteTouch();
         printMovement();
-//        getLastCheckpoint().printMovement();
-        this.cl = getLastCheckpoint();
+        getLastCheckpoint().printMovement();
         return null;
     }
 
@@ -254,6 +253,6 @@ public class MinimumMatrix extends Code {
     }
 
     protected MinimumMatrix clone()  {
-        return new MinimumMatrix(visited, maxVisitCount, visitCount, pos, values, movement, checkPoints);
+        return new MinimumMatrix(this);
     }
 }

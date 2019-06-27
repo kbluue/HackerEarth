@@ -17,19 +17,7 @@ public class MinimumMatrix extends Code {
     private Direction[][] movement;
     private List<MinimumMatrix> checkPoints;
 
-    private MinimumMatrix clone;
-
     public MinimumMatrix(){}
-
-    private MinimumMatrix(MinimumMatrix original) {
-        visited = original.visited;
-//        maxVisitCount = maxVisitCount;
-//        visitCount = visitCount;
-//        pos = pos;
-//        values = values;
-        movement = original.movement.clone();
-//        checkPoints = checkPoints;
-    }
 
     @Override
     protected String codeBody() {
@@ -41,13 +29,6 @@ public class MinimumMatrix extends Code {
         setMovement(pos, STUCK);
 
         checkForCompleteTouch();
-        printMovement();
-        getLastCheckpoint().printMovement();
-        System.out.println("Clone");
-        clone.printMovement();
-        clone.movement = new Direction[1][1];
-        clone.printMovement();
-        printMovement();
         return null;
     }
 
@@ -89,8 +70,6 @@ public class MinimumMatrix extends Code {
         //init checkpoints and add start point
         checkPoints = new ArrayList<>();
         saveCheckPoint();
-
-        clone = new MinimumMatrix(this);
     }
 
     private int[] getPosition(Direction direction) {
@@ -247,9 +226,6 @@ public class MinimumMatrix extends Code {
     }
 
     private void saveCheckPoint(){
-        System.out.println("Pre-clone");
-        clone().printMovement();
-        checkPoints.add(clone());
     }
 
     private MinimumMatrix getLastCheckpoint(){
@@ -259,9 +235,5 @@ public class MinimumMatrix extends Code {
         } else {
             return checkPoints.remove(checkPoints.size() - 1);
         }
-    }
-
-    protected MinimumMatrix clone()  {
-        return new MinimumMatrix(this);
     }
 }

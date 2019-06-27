@@ -1,10 +1,12 @@
 package com.company;
 
+import static com.company.InputGenerator.randomInt;
+
 public class TestExample extends ProblemExample implements Test {
 
     @Override
     public void generateInput() {
-        a = Test.generateInt(8, 10);
-        b = Test.generateInt(10);
+        a = randomInt(8, 10);
+        b = randomInt(10);
     }
 }

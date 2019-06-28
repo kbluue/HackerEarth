@@ -1,18 +1,26 @@
 package com.company.HackerEarth.JuneCircuit19;
 
-import com.company.Code;
+import com.company.Problem;
 
-public class FunctionValue extends Code {
+import java.util.Scanner;
 
-    private int t, p, l[], r[];
+public class FunctionValue implements Problem {
+
+    private int t;
+    private int p;
+    private int[] l;
+    private int[] r;
+    private Scanner input;
 
     @Override
-    protected String codeBody() {
+    public String solution() {
         return null;
     }
 
     @Override
-    protected void setInputs() {
+    public void initInput() {
+        input = new Scanner(System.in);
+
         t = input.nextInt();
         p = input.nextInt();
         l = new int[t];

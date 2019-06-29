@@ -44,7 +44,8 @@ public class FunctionValueTest extends FunctionValue implements Test {
 
         builder.append("t = ").append(t)
                 .append("\np = ").append(p)
-                .append(String.format("\n\n|%10s%10s||%10s%10s|", "t", "", "p", ""))
+                .append(String.format("\n\n|%10s%10s||%10s%10s|",
+                        "t", "", "p", ""))
                 .append("\n============================================");
 
         for (int i = 0; i < t; i++) {

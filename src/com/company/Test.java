@@ -10,16 +10,9 @@ public interface Test extends Problem {
 
     @Override
     default void run(){
-        setInput(true);
+        generateInput();
+        setManualInput();
         additionalAction();
         System.out.println(solution());
-    }
-
-    default void setInput(boolean auto){
-        if (auto){
-            generateInput();
-        } else {
-            setManualInput();
-        }
     }
 }

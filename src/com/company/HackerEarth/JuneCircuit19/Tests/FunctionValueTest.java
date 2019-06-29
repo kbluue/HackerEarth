@@ -8,11 +8,11 @@ import static com.company.InputGenerator.randomLong;
 
 public class FunctionValueTest extends FunctionValue implements Test {
 
-    private final boolean autoInput = false;
+    private final boolean autoInput = true;
 
     @Override
     public void generateInput() {
-        if (autoInput){
+        if (autoInput) {
             t = 5;
             p = randomLong(1);
             l = new long[t];
@@ -22,16 +22,15 @@ public class FunctionValueTest extends FunctionValue implements Test {
                 l[i] = randomInt(1, 1000);
                 r[i] = randomInt((int)l[i], 1000);
             }
-        } else {
-            setManualInput();
         }
-
     }
 
     @Override
     public void setManualInput() {
-        setStringSource("2 1 2 1 2 1");
-        initInput();
+        if (!autoInput){
+            setStringSource("2 1 2 1 2 1");
+            initInput();
+        }
     }
 
     @Override

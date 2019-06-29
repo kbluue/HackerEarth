@@ -13,14 +13,14 @@ public class FunctionValueTest extends FunctionValue implements Test {
     @Override
     public void generateInput() {
         if (autoInput) {
-            t = 5;
-            p = randomLong(1);
+            t = randomInt(1, (int) Math.pow(10, 3));
+            p = randomInt(1, (int) Math.pow(10, 9));
             l = new long[t];
             r = new long[t];
 
             for (int i = 0; i < t; i++) {
-                l[i] = randomInt(1, 1000);
-                r[i] = randomInt((int)l[i], 1000);
+                l[i] = randomLong(18);
+                r[i] = randomLong(l[i], (long)Math.pow(10, 18));
             }
         }
     }
@@ -44,11 +44,11 @@ public class FunctionValueTest extends FunctionValue implements Test {
 
         builder.append("t = ").append(t)
                 .append("\np = ").append(p)
-                .append("\n\n|     l     ||     r     |")
-                .append("\n==========================");
+                .append(String.format("\n\n|%10s%10s||%10s%10s|", "t", "", "p", ""))
+                .append("\n============================================");
 
         for (int i = 0; i < t; i++) {
-            builder.append(String.format("\n|%9s  ||%9s  |", l[i], r[i]));
+            builder.append(String.format("\n| %18s || %18s |", l[i], r[i]));
         }
 
         builder.append("\n");

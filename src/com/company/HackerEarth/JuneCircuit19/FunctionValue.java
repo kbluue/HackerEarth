@@ -13,7 +13,11 @@ public class FunctionValue implements Problem {
 
     @Override
     public String solution() {
-        return t + p + l[0] + r[0] + "";
+        StringBuilder builder = new StringBuilder();
+        for (int i = 0; i < t; i++) {
+            builder.append(modulo(solve(l[i], r[i]), p)).append("\n");
+        }
+        return builder.toString();
     }
 
     @Override
@@ -40,7 +44,7 @@ public class FunctionValue implements Problem {
         this.stringSource = stringSource;
     }
 
-    private long modulo(int a, int b){
+    private long modulo(long a, int b){
         return a%b;
     }
 
@@ -117,5 +121,11 @@ public class FunctionValue implements Problem {
         double sum2 = sumType2(x, n3);
         System.out.println(l1 + "//" + r1);
         return (long) (sum1 + sum2 + sum3);
+    }
+
+    public void printResult(){
+        for (int i = 0; i < t; i++) {
+            System.out.println(modulo(solve(l[i], r[i]), p));
+        }
     }
 }

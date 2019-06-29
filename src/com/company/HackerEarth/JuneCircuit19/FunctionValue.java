@@ -7,10 +7,10 @@ import java.util.Scanner;
 public class FunctionValue implements Problem {
 
     protected int t;
-    protected long p, l[], r[];
-    private Scanner input;
+    protected long p;
+    protected long[] l, r;
 
-    String stringSource;
+    private String stringSource;
 
     @Override
     public String solution() {
@@ -19,6 +19,7 @@ public class FunctionValue implements Problem {
 
     @Override
     public void initInput() {
+        Scanner input;
         if (stringSource == null) {
             input = new Scanner(System.in);
         } else {
@@ -36,7 +37,7 @@ public class FunctionValue implements Problem {
         }
     }
 
-    public void setStringSource(String stringSource) {
+    protected void setStringSource(String stringSource) {
         this.stringSource = stringSource;
     }
 }

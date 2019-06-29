@@ -8,22 +8,34 @@ import static com.company.InputGenerator.randomLong;
 
 public class FunctionValueTest extends FunctionValue implements Test {
 
+    private final boolean autoInput = false;
+
     @Override
     public void generateInput() {
-        t = 5;
-        p = randomLong(1);
-        l = new long[t];
-        r = new long[t];
+        if (autoInput){
+            t = 5;
+            p = randomLong(1);
+            l = new long[t];
+            r = new long[t];
 
-        for (int i = 0; i < t; i++) {
-            l[i] = randomInt(1, 1000);
-            r[i] = randomInt((int)l[i], 1000);
+            for (int i = 0; i < t; i++) {
+                l[i] = randomInt(1, 1000);
+                r[i] = randomInt((int)l[i], 1000);
+            }
+        } else {
+            setManualInput();
         }
+
+    }
+
+    @Override
+    public void setManualInput() {
+        setStringSource("2 1 2 1 2 1");
+        initInput();
     }
 
     @Override
     public void additionalAction() {
-        initInput();
         System.out.println(toString());
     }
 
@@ -33,7 +45,7 @@ public class FunctionValueTest extends FunctionValue implements Test {
 
         builder.append("t = ").append(t)
                 .append("\np = ").append(p)
-                .append("\n\n|     l     ||     p     |")
+                .append("\n\n|     l     ||     r     |")
                 .append("\n==========================");
 
         for (int i = 0; i < t; i++) {

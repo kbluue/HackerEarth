@@ -10,6 +10,8 @@ public class FunctionValue implements Problem {
     protected long p, l[], r[];
     private Scanner input;
 
+    String stringSource;
+
     @Override
     public String solution() {
         return t + p + l[0] + r[0] + "";
@@ -17,7 +19,11 @@ public class FunctionValue implements Problem {
 
     @Override
     public void initInput() {
-        input = new Scanner(System.in);
+        if (stringSource == null) {
+            input = new Scanner(System.in);
+        } else {
+            input = new Scanner(stringSource);
+        }
 
         t = input.nextInt();
         p = input.nextLong();
@@ -28,5 +34,9 @@ public class FunctionValue implements Problem {
             l[i] = input.nextLong();
             r[i] = input.nextLong();
         }
+    }
+
+    public void setStringSource(String stringSource) {
+        this.stringSource = stringSource;
     }
 }

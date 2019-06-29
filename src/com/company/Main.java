@@ -6,6 +6,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        new FunctionValueTest().run();
+        for (int i = 0; i < 10; i++) {
+            System.out.println(new FunctionValueTest().f(i));
+        }
     }
 }

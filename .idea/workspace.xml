@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="15c338ca-a3d4-446e-a3a3-12e1eeec11a1" name="Default Changelist" comment="Testing failed: IndexOutOfBound Caught and fixed with STUCK plug">
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/Code.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/Direction.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/FunctionValue.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/Path.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/Tests/FunctionValueTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/Tests/MinimumMatrixCloneTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/HackerEarth/JuneCircuit19/Tests/MinimumMatrixTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/ProblemExample.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/STDIN_STDOUT.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/220619/com/company/TestExample.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/FunctionValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/FunctionValue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Tests/FunctionValueTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Tests/FunctionValueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/InputGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/InputGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,24 +21,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Tests/FunctionValueTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="52" selection-start-column="52" selection-end-column="52" />
+            <state relative-caret-position="119">
+              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-              <folding>
-                <element signature="e#86#87#0" expanded="true" />
-                <element signature="e#122#123#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="17">
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -55,8 +45,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Problem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
+            <state>
+              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -64,8 +54,12 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+            <state relative-caret-position="153">
+              <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+              <folding>
+                <element signature="e#621#622#0" expanded="true" />
+                <element signature="e#645#646#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,8 +67,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/FunctionValue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="46" selection-start-column="46" selection-end-column="46" />
+            <state relative-caret-position="124">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#277#278#0" expanded="true" />
+                <element signature="e#319#320#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -82,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/company/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="170">
+              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -125,20 +124,20 @@
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/Problem.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/ProblemExample.java" />
         <option value="$PROJECT_DIR$/src/com/company/ProblemExample.java" />
-        <option value="$PROJECT_DIR$/src/com/company/InputGenerator.java" />
         <option value="$PROJECT_DIR$/src/com/company/TestExample.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Test.java" />
         <option value="$PROJECT_DIR$/src/com/company/Code.java" />
         <option value="$PROJECT_DIR$/src/com/company/Runnable.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Direction.java" />
         <option value="$PROJECT_DIR$/src/com/company/Problem.java" />
-        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/FunctionValue.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/company/InputGenerator.java" />
+        <option value="$PROJECT_DIR$/src/com/company/Test.java" />
         <option value="$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Tests/FunctionValueTest.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1382" />
@@ -259,6 +258,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -305,7 +305,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -425,7 +424,7 @@
     <frame x="-8" y="-8" width="1382" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.48931116" visible="true" weight="0.27231467" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48931116" visible="true" weight="0.18683812" />
       <window_info id="Structure" order="1" sideWeight="0.51068884" side_tool="true" weight="0.25718608" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -438,7 +437,7 @@
       <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" weight="0.32961783" />
-      <window_info anchor="bottom" id="Terminal" order="6" visible="true" weight="0.32961783" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="6" visible="true" weight="0.32961783" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32961783" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.32961783" />
@@ -450,7 +449,7 @@
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
-      <window_info anchor="right" id="Run" order="8" visible="true" weight="0.2677761" />
+      <window_info anchor="right" id="Run" order="8" visible="true" weight="0.21104388" />
     </layout>
     <layout-to-restore>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48931116" weight="0.26096824" />
@@ -539,92 +538,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/TestExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Code.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="33" selection-start-line="33" selection-end-line="33" />
-          <folding>
-            <element signature="e#178#179#0" expanded="true" />
-            <element signature="e#207#208#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/STDIN_STDOUT.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Direction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Tests/MinimumMatrixCloneTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/ProblemExample.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="42" selection-start-line="2" selection-start-column="42" selection-end-line="2" selection-end-column="42" />
-          <folding>
-            <element signature="e#140#141#0" expanded="true" />
-            <element signature="e#173#174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/TestExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/Code.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/STDIN_STDOUT.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/MinimumMatrix.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Direction.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Tests/MinimumMatrixCloneTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/company/ProblemExample.java" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Problem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="53" selection-start-line="2" selection-start-column="53" selection-end-line="2" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -635,27 +559,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/FunctionValue.java">
+    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/InputGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
+          <folding>
+            <element signature="e#621#622#0" expanded="true" />
+            <element signature="e#645#646#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Problem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="46" selection-start-column="46" selection-end-column="46" />
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/FunctionValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="124">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#319#320#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/HackerEarth/JuneCircuit19/Tests/FunctionValueTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="52" selection-start-column="52" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="32" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="119">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
           <folding>
-            <element signature="e#86#87#0" expanded="true" />
-            <element signature="e#122#123#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

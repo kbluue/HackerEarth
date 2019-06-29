@@ -8,7 +8,6 @@ public class InputGenerator {
         }
 
         int randomInt = (int)(Math.random() * b);
-        System.out.println(randomInt);
         if (randomInt >= a){
             return randomInt;
         } else {
@@ -23,5 +22,9 @@ public class InputGenerator {
         } else {
             return randomInt(a, 0);
         }
+    }
+
+    public static long randomLong(int powerOf10){
+        return 1;
     }
 }

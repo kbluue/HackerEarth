@@ -6,15 +6,13 @@ import java.util.Scanner;
 
 public class FunctionValue implements Problem {
 
-    private int t;
-    private int p;
-    private int[] l;
-    private int[] r;
+    protected int t;
+    protected long p, l[], r[];
     private Scanner input;
 
     @Override
     public String solution() {
-        return null;
+        return t + p + l[0] + r[0] + "";
     }
 
     @Override
@@ -22,13 +20,13 @@ public class FunctionValue implements Problem {
         input = new Scanner(System.in);
 
         t = input.nextInt();
-        p = input.nextInt();
-        l = new int[t];
-        r = new int[t];
+        p = input.nextLong();
+        l = new long[t];
+        r = new long[t];
 
         for (int i = 0; i < t; i++) {
-            l[i] = input.nextInt();
-            r[i] = input.nextInt();
+            l[i] = input.nextLong();
+            r[i] = input.nextLong();
         }
     }
 }

@@ -63,4 +63,59 @@ public class FunctionValue implements Problem {
             return 1 + (2 * y);
         }
     }
+
+    public double sumType1(long x, long n){
+        return (Math.pow(3, x)*(Math.pow(3, n) - 1)) / 2.0;
+    }
+
+    public double sumType2(long x, long n){
+        return (3 / 16.0)*(Math.pow(9, x))*(Math.pow(9, n) - 1) - (n / 2.0);
+    }
+
+    public double sumType3(long x, long n){
+        return 1 / 4.0 * ((Math.pow(3, 2 * x + 1) / 8.0)*(Math.pow(9, n) - 1)
+                - (Math.pow(9, x) / 8.0)*(Math.pow(9, n) - 1)
+                + (10 * n));
+    }
+
+    public long solve(long l, long r){
+        System.out.println(l + "//" + r);
+
+        long l1 = l;
+        long r1 = r;
+        if (l1%2 == 0){
+            l1++;
+        }
+        if (r1%2 == 0){
+            r1--;
+        }
+        long x = l1 / 2;
+        long n = (r1 - l1) / 2 + 1;
+        double sum1 = sumType1(x, n);
+        System.out.println(l + "//" + r);
+        System.out.println(l1 + "//" + r1);
+
+        l1 = l;
+        r1 = r;
+        while (l1%4 != 0){
+            l1++;
+        }
+        while (r1%4 != 0){
+            r1--;
+        }
+        x = l1/4;
+        long n1 = (r1 - l1) / 4 + 1;
+        double sum3 = sumType3(x, n1);
+        System.out.println(l1 + "//" + r1);
+
+        l1 = l;
+        while (l1%2 == 1 || l1%4 == 0){
+            l1++;
+        }
+        x = l1/4;
+        long n3 = r - l + 1 - n1 - n;
+        double sum2 = sumType2(x, n3);
+        System.out.println(l1 + "//" + r1);
+        return (long) (sum1 + sum2 + sum3);
+    }
 }

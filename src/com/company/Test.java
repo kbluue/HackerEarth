@@ -9,10 +9,9 @@ public class Test implements Problem {
 
     Test(Object problem){
         this.problem = problem;
-        Method[] methods = problem.getClass().getInterfaces()[0].getMethods();
+        Method[] methods = problem.getClass().getMethods();
         for (Method m : methods){
-            System.out.println(m.toGenericString());
-            System.out.println(m.toString());
+            System.out.println(m.toGenericString() + "\n");
         }
     }
 

@@ -55,7 +55,14 @@ public class FunctionValue implements Problem {
             double x = n/2;
             return Math.pow(3, x);
         } else {
-            return 2 * f(n - 1) - f(n - 2) + 2;
+            double x = n/4;
+            double y;
+            if (n%4 == 0){
+                y = (3 / 8.0 *(Math.pow(9, x) - 1)) - (9 / 8.0 * (Math.pow(9, x - 1) - 1));
+            } else {
+                y = 6 / 8.0 * (Math.pow(9, x) - 1);
+            }
+            return 1 + (2 * y);
         }
     }
 }

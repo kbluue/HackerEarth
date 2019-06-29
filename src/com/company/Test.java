@@ -1,18 +1,52 @@
 package com.company;
 
-public interface Test extends Problem {
+import java.lang.reflect.Method;
 
-    void generateInput();
+public class Test implements Problem {
 
-    void setManualInput();
+    boolean autoInput;
+    Object problem;
 
-    void additionalAction();
+    Test(Object problem){
+        this.problem = problem;
+        Method[] methods = problem.getClass().getInterfaces()[0].getMethods();
+        for (Method m : methods){
+            System.out.println(m.toGenericString());
+            System.out.println(m.toString());
+        }
+    }
+
+//    abstract void generateInput();
+//
+//    abstract void setManualInput();
+//
+//    abstract void additionalAction();
+
+    protected void setAutoInput(boolean autoInput) {
+        this.autoInput = autoInput;
+    }
 
     @Override
-    default void run(){
-        generateInput();
-        setManualInput();
-        additionalAction();
+    public String solution() {
+        return null;
+    }
+
+    @Override
+    public void initInput() {
+
+    }
+
+    @Override
+    public void run(){
+//        if (autoInput) generateInput();
+//        else setManualInput();
+//
+//        additionalAction();
         System.out.println(solution());
+    }
+
+    public boolean isProblem() {
+        Class<?> clazz = problem.getClass();
+        return Problem.class.isAssignableFrom(clazz);
     }
 }

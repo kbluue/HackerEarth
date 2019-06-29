@@ -49,8 +49,6 @@ public class FunctionValue implements Problem {
             return 0;
         } else if (n == 1 || n == 2){
             return 1;
-        } else if (n == 4){
-            return 7;
         } else if (n%2 != 0){
             double x = n/2;
             return Math.pow(3, x);

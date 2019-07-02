@@ -15,7 +15,7 @@ public class RotationTest extends Rotation implements Test {
             n = randomInt(1000);
             s = randomString(n);
             int n1 = randomInt(n);
-            t = s.substring(n1 - 1) + s.substring(0, n1) + 'a';
+            t = s.substring(n1) + s.substring(0, n1) + 'a';
             System.out.println("n1 ==> " + n1);
         }
     }

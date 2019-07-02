@@ -6,17 +6,21 @@ import java.util.Scanner;
 
 public class Rotation implements Problem {
 
-    private int n;
-    private String s, t;
+    protected int n;
+    protected String s, t;
 
     @Override
     public String solution() {
+        String t1 = t;
+        String t2 = t;
+
         if (s.length() == t.length()){
             for (int i = 0; i < n; i++) {
-                if (s.equals(t)){
+                if (s.equals(t1) || s.equals(t2)){
                     return i + "";
                 }
-                t = adjust(t);
+                t1 = adjust(t1, true);
+                t2 = adjust(t2, false);
             }
         }
         return "-1";
@@ -31,7 +35,8 @@ public class Rotation implements Problem {
         t = sc.next();
     }
 
-    public String adjust(String in) {
-        return in.substring(1) + in.charAt(0);
+    private String adjust(String in, boolean forward) {
+        if (forward) return in.substring(1) + in.charAt(0);
+        else return in.charAt(in.length() - 1) + in.substring(0, in.length() -1);
     }
 }

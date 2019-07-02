@@ -11,7 +11,15 @@ public class Rotation implements Problem {
 
     @Override
     public String solution() {
-        return null;
+        if (s.length() == t.length()){
+            for (int i = 0; i < n; i++) {
+                if (s.equals(t)){
+                    return i + "";
+                }
+                t = adjust(t);
+            }
+        }
+        return "-1";
     }
 
     @Override

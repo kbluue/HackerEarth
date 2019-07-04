@@ -11,11 +11,12 @@ public class MinimumMatrixTest extends MinimumMatrix implements Test {
 
     @Override
     public void setManualInput() {
-
+        setSource("2 3 2 2 2 2 3 3 6 4");
+        initInput();
     }
 
     @Override
     public void additionalAction() {
-
+        printValues();
     }
 }
